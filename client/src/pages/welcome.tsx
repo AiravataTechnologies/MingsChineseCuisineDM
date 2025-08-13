@@ -174,31 +174,31 @@ export default function Welcome() {
         <Sparkles style={{ color: 'var(--mings-black)' }} className="text-3xl" />
       </div>
 
-      {/* Social Media Icons - Positioned away from logo on mobile */}
-      <div className="absolute top-6 right-6 z-30 flex space-x-3">
+      {/* Social Media Icons - Responsive positioning to avoid logo collision */}
+      <div className="absolute top-4 right-4 sm:top-6 sm:right-6 z-30 flex space-x-2 sm:space-x-3">
         <motion.a
           href="https://instagram.com/mingschinesecuisine"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/90 flex items-center justify-center hover:bg-white transition-all duration-300 elegant-shadow"
+          className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-white/90 flex items-center justify-center hover:bg-white transition-all duration-300 elegant-shadow"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
-          <Instagram className="w-5 h-5 md:w-6 md:h-6" style={{ color: 'var(--mings-orange)' }} />
+          <Instagram className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" style={{ color: 'var(--mings-orange)' }} />
         </motion.a>
         <motion.a
           href="https://facebook.com/mingschinesecuisine"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/90 flex items-center justify-center hover:bg-white transition-all duration-300 elegant-shadow"
+          className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-white/90 flex items-center justify-center hover:bg-white transition-all duration-300 elegant-shadow"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
-          <Facebook className="w-5 h-5 md:w-6 md:h-6" style={{ color: 'var(--mings-orange)' }} />
+          <Facebook className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" style={{ color: 'var(--mings-orange)' }} />
         </motion.a>
       </div>
 
-      <div className="relative z-20 min-h-screen flex items-center justify-center p-1 md:p-4">
+      <div className="relative z-20 min-h-screen flex items-center justify-center p-2 sm:p-4 md:p-6">
         <div className="text-center max-w-5xl mx-auto w-full">
           {/* Logo and Restaurant Name */}
           <motion.div
@@ -207,9 +207,9 @@ export default function Welcome() {
             transition={{ duration: 0.8 }}
             className="mb-12"
           >
-            {/* Restaurant Logo */}
+            {/* Restaurant Logo - Responsive sizing to prevent overlap */}
             <motion.div
-              className="w-48 h-48 mx-auto mb-8 rounded-full bg-white p-6 flex items-center justify-center elegant-shadow"
+              className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto mb-6 sm:mb-8 rounded-full bg-white p-4 sm:p-5 md:p-6 flex items-center justify-center elegant-shadow"
               animate={{
                 y: [0, -8, 0]
               }}
@@ -233,20 +233,20 @@ export default function Welcome() {
               className="mb-6"
             >
               <h1
-                className="font-serif text-8xl md:text-10xl font-bold drop-shadow-lg mb-2"
+                className="font-serif text-4xl sm:text-6xl md:text-8xl lg:text-10xl font-bold drop-shadow-lg mb-2"
                 style={{ color: 'var(--mings-white)', fontFamily: 'Times, serif' }}
               >
                 MING'S
               </h1>
               <h2
-                className="font-serif text-5xl md:text-7xl font-semibold drop-shadow-lg"
+                className="font-serif text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-semibold drop-shadow-lg"
                 style={{ color: 'var(--mings-white)', fontFamily: 'Times, serif' }}
               >
                 Chinese Cuisine
               </h2>
             </motion.div>
             <motion.p
-              className="font-cormorant text-lg md:text-3xl italic mt-4 font-medium px-4 md:px-0"
+              className="font-cormorant text-sm sm:text-lg md:text-2xl lg:text-3xl italic mt-2 sm:mt-4 font-medium px-2 sm:px-4 md:px-0"
               style={{ color: 'var(--mings-white)' }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -256,7 +256,7 @@ export default function Welcome() {
             </motion.p>
           </motion.div>
 
-          {/* View Menu Button */}
+          {/* View Menu Button - Responsive sizing */}
           <motion.button
             initial={{ opacity: 0, y: 30, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -267,35 +267,35 @@ export default function Welcome() {
             }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setLocation("/menu")}
-            className="px-12 py-4 rounded-full font-cinzel text-xl font-bold transition-all duration-300 elegant-shadow border-4 mb-12"
+            className="px-6 sm:px-10 md:px-12 py-3 sm:py-4 rounded-full font-cinzel text-lg sm:text-xl font-bold transition-all duration-300 elegant-shadow border-2 sm:border-3 md:border-4 mb-8 sm:mb-12"
             style={{
               color: 'var(--mings-white)',
               borderColor: 'var(--mings-white)',
               backgroundColor: 'var(--mings-orange)'
             }}
           >
-            <span className="flex items-center">
-              <Utensils className="inline-block mr-3 text-xl" />
+            <span className="flex items-center justify-center">
+              <Utensils className="inline-block mr-2 sm:mr-3 text-lg sm:text-xl" />
               Explore Our Menu
             </span>
           </motion.button>
 
           {/* Quick 5-Star Rating */}
-          <QuickStarRating className="mb-12" />
+          <QuickStarRating className="mb-8 sm:mb-12" />
 
-          {/* About Section - Wider card for mobile with minimal margins */}
+          {/* About Section - Fully responsive design */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.0, ease: "easeOut" }}
-            className="mings-card rounded-2xl md:rounded-3xl p-4 md:p-16 elegant-shadow border-2 md:border-3 mx-1 md:mx-auto max-w-none md:max-w-5xl w-auto md:w-auto"
+            className="mings-card rounded-xl sm:rounded-2xl md:rounded-3xl p-3 sm:p-6 md:p-12 lg:p-16 elegant-shadow border-2 md:border-3 mx-2 sm:mx-4 md:mx-auto max-w-none md:max-w-5xl"
             style={{ 
               borderColor: 'var(--mings-black)',
               backgroundColor: 'var(--mings-white)'
             }}
           >
             <motion.h2
-              className="font-cinzel text-2xl md:text-5xl font-bold mb-4 md:mb-8"
+              className="font-cinzel text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 md:mb-8"
               style={{ color: 'var(--mings-black)' }}
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
@@ -304,7 +304,7 @@ export default function Welcome() {
               Authentic Heritage
             </motion.h2>
             <motion.p
-              className="font-cormorant text-base md:text-2xl leading-snug md:leading-relaxed mb-6 md:mb-10 font-medium"
+              className="font-cormorant text-sm sm:text-base md:text-xl lg:text-2xl leading-relaxed mb-4 sm:mb-6 md:mb-10 font-medium"
               style={{ color: 'var(--mings-black)' }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -332,15 +332,15 @@ export default function Welcome() {
 `}
 </style>
 
-{/* Restaurant Details */}
+{/* Restaurant Details - Responsive grid */}
 <motion.div
-  className="grid md:grid-cols-3 gap-3 md:gap-8"
+  className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 md:gap-8"
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.6, delay: 1.3, ease: "easeOut" }}
 >
   <motion.div
-    className="text-center p-3 md:p-6 rounded-xl md:rounded-2xl border-2 md:border-3 min-h-[140px] md:min-h-[200px] flex flex-col justify-center"
+    className="text-center p-3 sm:p-4 md:p-6 rounded-lg sm:rounded-xl md:rounded-2xl border-2 md:border-3 min-h-[120px] sm:min-h-[140px] md:min-h-[200px] flex flex-col justify-center"
     style={{ 
       borderColor: 'var(--mings-black)',
       backgroundColor: 'var(--mings-white)'
@@ -348,14 +348,14 @@ export default function Welcome() {
     whileHover={{ scale: 1.02 }}
     transition={{ duration: 0.3 }}
   >
-    <Clock className="text-xl md:text-3xl mx-auto mb-2 md:mb-4" style={{ color: 'var(--mings-orange)' }} />
-    <h3 className="font-playfair text-lg md:text-2xl font-bold mb-1 md:mb-3" style={{ color: 'var(--mings-black)' }}>
+    <Clock className="text-lg sm:text-xl md:text-3xl mx-auto mb-2 md:mb-4" style={{ color: 'var(--mings-orange)' }} />
+    <h3 className="font-playfair text-base sm:text-lg md:text-2xl font-bold mb-1 md:mb-3" style={{ color: 'var(--mings-black)' }}>
       Timings
     </h3>
-    <p className="font-cormorant text-sm md:text-lg force-normal-font" style={{ color: 'var(--mings-black)' }}>Mon - Sun<br />11:00 AM - 11:00 PM</p>
+    <p className="font-cormorant text-xs sm:text-sm md:text-lg force-normal-font" style={{ color: 'var(--mings-black)' }}>Mon - Sun<br />11:00 AM - 11:00 PM</p>
   </motion.div>
   <motion.div
-    className="text-center p-3 md:p-6 rounded-xl md:rounded-2xl border-2 md:border-3 min-h-[140px] md:min-h-[200px] flex flex-col justify-center"
+    className="text-center p-3 sm:p-4 md:p-6 rounded-lg sm:rounded-xl md:rounded-2xl border-2 md:border-3 min-h-[120px] sm:min-h-[140px] md:min-h-[200px] flex flex-col justify-center"
     style={{ 
       borderColor: 'var(--mings-black)',
       backgroundColor: 'var(--mings-white)'
@@ -363,14 +363,14 @@ export default function Welcome() {
     whileHover={{ scale: 1.02 }}
     transition={{ duration: 0.3 }}
   >
-    <MapPin className="text-xl md:text-3xl mx-auto mb-2 md:mb-4" style={{ color: 'var(--mings-orange)' }} />
-    <h3 className="font-playfair text-lg md:text-2xl font-bold mb-1 md:mb-3" style={{ color: 'var(--mings-black)' }}>
+    <MapPin className="text-lg sm:text-xl md:text-3xl mx-auto mb-2 md:mb-4" style={{ color: 'var(--mings-orange)' }} />
+    <h3 className="font-playfair text-base sm:text-lg md:text-2xl font-bold mb-1 md:mb-3" style={{ color: 'var(--mings-black)' }}>
       Address
     </h3>
-    <p className="font-cormorant text-sm md:text-lg force-normal-font" style={{ color: 'var(--mings-black)' }}>123 Food Street<br />Culinary District, City</p>
+    <p className="font-cormorant text-xs sm:text-sm md:text-lg force-normal-font" style={{ color: 'var(--mings-black)' }}>123 Food Street<br />Culinary District, City</p>
   </motion.div>
   <motion.div
-    className="text-center p-3 md:p-6 rounded-xl md:rounded-2xl border-2 md:border-3 min-h-[140px] md:min-h-[200px] flex flex-col justify-center"
+    className="text-center p-3 sm:p-4 md:p-6 rounded-lg sm:rounded-xl md:rounded-2xl border-2 md:border-3 min-h-[120px] sm:min-h-[140px] md:min-h-[200px] flex flex-col justify-center"
     style={{ 
       borderColor: 'var(--mings-black)',
       backgroundColor: 'var(--mings-white)'
@@ -378,11 +378,11 @@ export default function Welcome() {
     whileHover={{ scale: 1.02 }}
     transition={{ duration: 0.3 }}
   >
-    <Phone className="text-xl md:text-3xl mx-auto mb-2 md:mb-4" style={{ color: 'var(--mings-orange)' }} />
-    <h3 className="font-playfair text-lg md:text-2xl font-bold mb-1 md:mb-3" style={{ color: 'var(--mings-black)' }}>
+    <Phone className="text-lg sm:text-xl md:text-3xl mx-auto mb-2 md:mb-4" style={{ color: 'var(--mings-orange)' }} />
+    <h3 className="font-playfair text-base sm:text-lg md:text-2xl font-bold mb-1 md:mb-3" style={{ color: 'var(--mings-black)' }}>
       Contact
     </h3>
-    <p className="font-cormorant text-sm md:text-lg force-normal-font" style={{ color: 'var(--mings-black)' }}>+91 98765 43210<br />info@mingsrestaurant.com</p>
+    <p className="font-cormorant text-xs sm:text-sm md:text-lg force-normal-font" style={{ color: 'var(--mings-black)' }}>+91 98765 43210<br />info@mingsrestaurant.com</p>
   </motion.div>
 </motion.div>
           </motion.div>
@@ -392,6 +392,46 @@ export default function Welcome() {
 
           {/* Google Review Section */}
           <GoogleReview className="mt-8 md:mt-12" />
+
+          {/* Developer Attribution */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.5, ease: "easeOut" }}
+            className="mt-8 sm:mt-12 text-center"
+          >
+            <p className="text-sm sm:text-base font-medium" style={{ color: 'var(--mings-white)' }}>
+              Developed by{' '}
+              <motion.a
+                href="https://www.airavatatechnologies.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold underline decoration-2 underline-offset-4 transition-all duration-300"
+                style={{ color: 'var(--mings-white)' }}
+                whileHover={{ 
+                  scale: 1.05,
+                  textShadow: "0 0 8px rgba(255, 255, 255, 0.8)"
+                }}
+                whileTap={{ scale: 0.95 }}
+              >
+                AIRAVATA TECHNOLOGIES
+              </motion.a>
+              {' '}
+              <motion.span
+                className="text-yellow-400 text-lg sm:text-xl"
+                animate={{
+                  scale: [1, 1.2, 1],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              >
+                💛
+              </motion.span>
+            </p>
+          </motion.div>
         </div>
       </div>
     </div>
