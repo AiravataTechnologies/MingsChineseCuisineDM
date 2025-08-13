@@ -18,14 +18,52 @@ export default function Welcome() {
     
     if (!hasPlayedInSession && !hasPlayedRef.current) {
       // Try the muted autoplay technique first
-      const attemptMutedAutoplay = async () => {
-        const audio = new Audio('/Welcome.mp3');
+      const attemptMutedAutoplay = async (useTimestamp: boolean = true) => {
+        // First, verify the audio file exists using fetch (for Vercel compatibility)
+        try {
+          const response = await fetch('/Welcome.mp3', { method: 'HEAD' });
+          if (!response.ok) {
+            console.error('Audio file not accessible:', response.status);
+            return;
+          }
+          console.log('Audio file verified as accessible');
+        } catch (fetchError) {
+          console.error('Could not verify audio file existence:', fetchError);
+          return;
+        }
+        
+        // Add timestamp to bypass potential caching issues in Vercel (optional)
+        const audioSrc = useTimestamp ? `/Welcome.mp3?v=${Date.now()}` : '/Welcome.mp3';
+        const audio = new Audio(audioSrc);
         audioRef.current = audio;
         
         // Set properties for better autoplay success
         audio.preload = 'auto';
         audio.muted = true; // Start muted to bypass autoplay restrictions
         audio.loop = false;
+        audio.crossOrigin = 'anonymous'; // Add for better Vercel compatibility
+        
+        // Add error handling for file loading
+        audio.onerror = (e) => {
+          console.error('Audio file failed to load with timestamp, trying fallback without timestamp:', e);
+          // Recursively try without timestamp
+          if (useTimestamp) {
+            attemptMutedAutoplay(false);
+          } else {
+            console.error('Both timestamped and non-timestamped audio loading failed');
+            console.log('Audio file not available, skipping audio playback');
+          }
+        };
+        
+        // Add load event to ensure file is ready
+        audio.oncanplay = () => {
+          console.log('Audio file loaded and ready to play');
+        };
+        
+        // Add network state logging for debugging
+        audio.onloadstart = () => console.log('Audio loading started');
+        audio.onloadeddata = () => console.log('Audio data loaded');
+        audio.oncanplaythrough = () => console.log('Audio can play through completely');
         
         try {
           // Play muted first (this usually works)
@@ -97,7 +135,7 @@ export default function Welcome() {
             const resumeOnInteraction = () => {
               audioContext.resume().then(() => {
                 console.log('AudioContext resumed, trying to play audio');
-                attemptMutedAutoplay();
+                attemptMutedAutoplay(true);
                 document.removeEventListener('click', resumeOnInteraction);
                 document.removeEventListener('touchstart', resumeOnInteraction);
               });
@@ -106,11 +144,11 @@ export default function Welcome() {
             document.addEventListener('click', resumeOnInteraction, { once: true });
             document.addEventListener('touchstart', resumeOnInteraction, { once: true });
           } else {
-            attemptMutedAutoplay();
+            attemptMutedAutoplay(true);
           }
         } catch (error) {
           console.log('Web Audio API not available, using standard approach');
-          attemptMutedAutoplay();
+          attemptMutedAutoplay(true);
         }
       };
 

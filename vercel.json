@@ -28,6 +28,14 @@
       "dest": "/api/cart/index.js"
     },
     {
+      "src": "/Welcome.mp3",
+      "dest": "/Welcome.mp3",
+      "headers": {
+        "Cache-Control": "public, max-age=86400",
+        "Content-Type": "audio/mpeg"
+      }
+    },
+    {
       "src": "/assets/(.*)",
       "dest": "/assets/$1"
     },
