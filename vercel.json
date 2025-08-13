@@ -1,0 +1,39 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "buildCommand": "npx vite build",
+        "distDir": "dist/public"
+      }
+    },
+    {
+      "src": "api/menu-items/index.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "api/cart/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/menu-items",
+      "dest": "/api/menu-items/index.js"
+    },
+    {
+      "src": "/api/cart",
+      "dest": "/api/cart/index.js"
+    },
+    {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
