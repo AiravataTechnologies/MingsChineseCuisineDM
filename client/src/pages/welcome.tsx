@@ -198,7 +198,7 @@ export default function Welcome() {
         </motion.a>
       </div>
 
-      <div className="relative z-20 min-h-screen flex items-center justify-center p-2 sm:p-4 md:p-6 pt-20 sm:pt-24 md:pt-28">
+      <div className="relative z-20 min-h-screen flex items-center justify-center p-2 sm:p-4 md:p-6 pt-16 sm:pt-18 md:pt-20">
         <div className="text-center max-w-5xl mx-auto w-full">
           {/* Logo and Restaurant Name */}
           <motion.div
@@ -207,9 +207,9 @@ export default function Welcome() {
             transition={{ duration: 0.8 }}
             className="mb-12"
           >
-            {/* Restaurant Logo - Responsive sizing with proper top spacing */}
+            {/* Restaurant Logo - Responsive sizing with reduced top spacing */}
             <motion.div
-              className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto mb-6 sm:mb-8 mt-8 sm:mt-12 md:mt-16 rounded-full bg-white p-4 sm:p-5 md:p-6 flex items-center justify-center elegant-shadow"
+              className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto mb-6 sm:mb-8 mt-4 sm:mt-6 md:mt-8 rounded-full bg-white p-4 sm:p-5 md:p-6 flex items-center justify-center elegant-shadow"
               animate={{
                 y: [0, -8, 0]
               }}
@@ -246,7 +246,7 @@ export default function Welcome() {
               </h2>
             </motion.div>
             <motion.p
-              className="font-cormorant text-base sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl italic mt-4 sm:mt-6 md:mt-8 font-medium px-2 sm:px-4 md:px-0"
+              className="font-cormorant text-lg sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl italic mt-4 sm:mt-6 md:mt-8 font-medium px-2 sm:px-4 md:px-0 leading-relaxed"
               style={{ color: 'var(--mings-white)' }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
