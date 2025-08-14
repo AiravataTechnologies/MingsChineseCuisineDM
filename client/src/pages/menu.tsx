@@ -360,9 +360,9 @@ export default function Menu() {
                 style={{ color: "var(--elegant-gold)" }}
               >
                 {showHamburgerMenu ? (
-                  <X className="h-5 w-5 sm:h-6 sm:w-6" />
+                  <X className="h-7 w-7 sm:h-8 sm:w-8 md:h-6 md:w-6" />
                 ) : (
-                  <MenuIcon className="h-5 w-5 sm:h-6 sm:w-6" />
+                  <MenuIcon className="h-7 w-7 sm:h-8 sm:w-8 md:h-6 md:w-6" />
                 )}
               </Button>
             </div>
