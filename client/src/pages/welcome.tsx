@@ -237,8 +237,8 @@ export default function Welcome() {
                 style={{ 
                   color: 'var(--mings-white)', 
                   fontFamily: 'Times, serif',
-                  textShadow: '0 0 0 1px black, 2px 2px 4px rgba(0,0,0,0.3)',
-                  WebkitTextStroke: '1px black'
+                  textShadow: '0 0 0 0.5px black, 2px 2px 4px rgba(0,0,0,0.3)',
+                  WebkitTextStroke: '0.5px black'
                 }}
               >
                 MING'S
@@ -248,8 +248,8 @@ export default function Welcome() {
                 style={{ 
                   color: 'var(--mings-white)', 
                   fontFamily: 'Times, serif',
-                  textShadow: '0 0 0 1px black, 2px 2px 4px rgba(0,0,0,0.3)',
-                  WebkitTextStroke: '1px black'
+                  textShadow: '0 0 0 0.5px black, 2px 2px 4px rgba(0,0,0,0.3)',
+                  WebkitTextStroke: '0.5px black'
                 }}
               >
                 Chinese Cuisine
