@@ -166,7 +166,7 @@ export default function Welcome() {
   }, []);
 
   return (
-    <div className="min-h-screen relative overflow-hidden" style={{ backgroundColor: 'var(--mings-black)' }}>
+    <div className="min-h-screen mings-bg-gradient relative overflow-hidden">
       <FloatingParticles />
 
       {/* Decorative Elements */}
@@ -233,20 +233,20 @@ export default function Welcome() {
               className="mb-6"
             >
               <h1
-                className="font-serif text-5xl sm:text-7xl md:text-9xl lg:text-[12rem] xl:text-[14rem] font-bold drop-shadow-lg mb-2"
-                style={{ color: 'var(--mings-orange)', fontFamily: 'Times, serif' }}
+                className="font-serif text-4xl sm:text-6xl md:text-8xl lg:text-10xl font-bold drop-shadow-lg mb-2"
+                style={{ color: 'var(--mings-white)', fontFamily: 'Times, serif' }}
               >
                 MING'S
               </h1>
               <h2
-                className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-9xl font-semibold drop-shadow-lg"
+                className="font-serif text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-semibold drop-shadow-lg"
                 style={{ color: 'var(--mings-white)', fontFamily: 'Times, serif' }}
               >
                 Chinese Cuisine
               </h2>
             </motion.div>
             <motion.p
-              className="font-cormorant text-lg sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl italic mt-2 sm:mt-4 font-medium px-2 sm:px-4 md:px-0"
+              className="font-cormorant text-sm sm:text-lg md:text-2xl lg:text-3xl italic mt-2 sm:mt-4 font-medium px-2 sm:px-4 md:px-0"
               style={{ color: 'var(--mings-white)' }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
