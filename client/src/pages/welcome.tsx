@@ -234,13 +234,23 @@ export default function Welcome() {
             >
               <h1
                 className="font-serif text-5xl sm:text-7xl md:text-9xl lg:text-[10rem] xl:text-[12rem] font-bold drop-shadow-lg mb-2 sm:mb-4"
-                style={{ color: 'var(--mings-white)', fontFamily: 'Times, serif' }}
+                style={{ 
+                  color: 'var(--mings-white)', 
+                  fontFamily: 'Times, serif',
+                  textShadow: '0 0 0 1px black, 2px 2px 4px rgba(0,0,0,0.3)',
+                  WebkitTextStroke: '1px black'
+                }}
               >
                 MING'S
               </h1>
               <h2
                 className="font-serif text-3xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-semibold drop-shadow-lg"
-                style={{ color: 'var(--mings-white)', fontFamily: 'Times, serif' }}
+                style={{ 
+                  color: 'var(--mings-white)', 
+                  fontFamily: 'Times, serif',
+                  textShadow: '0 0 0 1px black, 2px 2px 4px rgba(0,0,0,0.3)',
+                  WebkitTextStroke: '1px black'
+                }}
               >
                 Chinese Cuisine
               </h2>
