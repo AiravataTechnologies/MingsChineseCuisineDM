@@ -676,10 +676,7 @@ export default function Menu() {
                     
                     {/* Discount amount */}
                     <div className="text-center">
-                      <div className="text-xs text-gray-500 font-semibold transform -rotate-90 whitespace-nowrap">
-                        SHOPPING COUPON
-                      </div>
-                      <div className="text-lg font-bold mt-1" style={{ color: coupon.bgColor }}>
+                      <div className="text-lg font-bold" style={{ color: coupon.bgColor }}>
                         ₹{coupon.discount}
                       </div>
                     </div>
