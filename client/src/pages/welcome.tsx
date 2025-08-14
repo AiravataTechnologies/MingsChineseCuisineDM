@@ -234,7 +234,11 @@ export default function Welcome() {
             >
               <h1
                 className="font-serif text-5xl sm:text-7xl md:text-9xl lg:text-[12rem] xl:text-[14rem] font-bold drop-shadow-lg mb-2"
-                style={{ color: 'var(--mings-orange)', fontFamily: 'Times, serif' }}
+                style={{ 
+                  color: 'var(--mings-orange)', 
+                  fontFamily: 'Times, serif',
+                  WebkitTextStroke: '2px var(--mings-orange)'
+                }}
               >
                 MING'S
               </h1>
@@ -301,7 +305,7 @@ export default function Welcome() {
               animate={{ scale: 1 }}
               transition={{ duration: 0.6, delay: 1.1, ease: "easeOut" }}
             >
-              Authentic Heritage
+              Experience Authentic Chinese Flavors
             </motion.h2>
             <motion.p
               className="font-cormorant text-sm sm:text-base md:text-xl lg:text-2xl leading-relaxed mb-4 sm:mb-6 md:mb-10 font-medium"
@@ -310,10 +314,7 @@ export default function Welcome() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 1.2, ease: "easeOut" }}
             >
-              Experience the authentic flavors of traditional Chinese cuisine at Mings Chinese Cuisine, where
-              time-honored recipes meet modern culinary artistry. Our master chefs craft each dish with
-              passion and precision, creating an unforgettable dining experience that celebrates the rich
-              heritage of Chinese gastronomy.
+              Experience authentic Chinese flavors at Mings Chinese Cuisine, where tradition meets modern culinary artistry for an unforgettable dining experience.
             </motion.p>
 
             <style>
@@ -367,7 +368,7 @@ export default function Welcome() {
     <h3 className="font-playfair text-base sm:text-lg md:text-2xl font-bold mb-1 md:mb-3" style={{ color: 'var(--mings-black)' }}>
       Address
     </h3>
-    <p className="font-cormorant text-xs sm:text-sm md:text-lg force-normal-font" style={{ color: 'var(--mings-black)' }}>123 Food Street<br />Culinary District, City</p>
+    <p className="font-cormorant text-xs sm:text-sm md:text-lg force-normal-font" style={{ color: 'var(--mings-black)' }}>Shop no 2&3, ganga godavari apartment<br />katemanivali naka, Prabhuram Nagar<br />Kalyan East, Thane, Kalyan<br />Maharashtra 421306</p>
   </motion.div>
   <motion.div
     className="text-center p-3 sm:p-4 md:p-6 rounded-lg sm:rounded-xl md:rounded-2xl border-2 md:border-3 min-h-[120px] sm:min-h-[140px] md:min-h-[200px] flex flex-col justify-center"
@@ -382,7 +383,7 @@ export default function Welcome() {
     <h3 className="font-playfair text-base sm:text-lg md:text-2xl font-bold mb-1 md:mb-3" style={{ color: 'var(--mings-black)' }}>
       Contact
     </h3>
-    <p className="font-cormorant text-xs sm:text-sm md:text-lg force-normal-font" style={{ color: 'var(--mings-black)' }}>+91 98765 43210<br />info@mingsrestaurant.com</p>
+    <p className="font-cormorant text-xs sm:text-sm md:text-lg force-normal-font" style={{ color: 'var(--mings-black)' }}>+91 075069 69333<br />info@mingsrestaurant.com</p>
   </motion.div>
 </motion.div>
           </motion.div>
