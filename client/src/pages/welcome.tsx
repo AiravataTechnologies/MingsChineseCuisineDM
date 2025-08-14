@@ -198,7 +198,7 @@ export default function Welcome() {
         </motion.a>
       </div>
 
-      <div className="relative z-20 min-h-screen flex items-center justify-center p-2 sm:p-4 md:p-6">
+      <div className="relative z-20 min-h-screen flex items-center justify-center p-2 sm:p-4 md:p-6 pt-20 sm:pt-24 md:pt-28">
         <div className="text-center max-w-5xl mx-auto w-full">
           {/* Logo and Restaurant Name */}
           <motion.div
@@ -207,9 +207,9 @@ export default function Welcome() {
             transition={{ duration: 0.8 }}
             className="mb-12"
           >
-            {/* Restaurant Logo - Responsive sizing to prevent overlap */}
+            {/* Restaurant Logo - Responsive sizing with proper top spacing */}
             <motion.div
-              className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto mb-6 sm:mb-8 rounded-full bg-white p-4 sm:p-5 md:p-6 flex items-center justify-center elegant-shadow"
+              className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto mb-6 sm:mb-8 mt-8 sm:mt-12 md:mt-16 rounded-full bg-white p-4 sm:p-5 md:p-6 flex items-center justify-center elegant-shadow"
               animate={{
                 y: [0, -8, 0]
               }}
@@ -233,20 +233,20 @@ export default function Welcome() {
               className="mb-6"
             >
               <h1
-                className="font-serif text-4xl sm:text-6xl md:text-8xl lg:text-10xl font-bold drop-shadow-lg mb-2"
+                className="font-serif text-5xl sm:text-7xl md:text-9xl lg:text-[10rem] xl:text-[12rem] font-bold drop-shadow-lg mb-2 sm:mb-4"
                 style={{ color: 'var(--mings-white)', fontFamily: 'Times, serif' }}
               >
                 MING'S
               </h1>
               <h2
-                className="font-serif text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-semibold drop-shadow-lg"
+                className="font-serif text-3xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-semibold drop-shadow-lg"
                 style={{ color: 'var(--mings-white)', fontFamily: 'Times, serif' }}
               >
                 Chinese Cuisine
               </h2>
             </motion.div>
             <motion.p
-              className="font-cormorant text-sm sm:text-lg md:text-2xl lg:text-3xl italic mt-2 sm:mt-4 font-medium px-2 sm:px-4 md:px-0"
+              className="font-cormorant text-base sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl italic mt-4 sm:mt-6 md:mt-8 font-medium px-2 sm:px-4 md:px-0"
               style={{ color: 'var(--mings-white)' }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -310,10 +310,7 @@ export default function Welcome() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 1.2, ease: "easeOut" }}
             >
-              Experience the authentic flavors of traditional Chinese cuisine at Mings Chinese Cuisine, where
-              time-honored recipes meet modern culinary artistry. Our master chefs craft each dish with
-              passion and precision, creating an unforgettable dining experience that celebrates the rich
-              heritage of Chinese gastronomy.
+              At Mings Chinese Cuisine, timeless recipes meet modern mastery, delivering an exquisite dining experience that celebrates the elegance and depth of Chinese culinary heritage.
             </motion.p>
 
             <style>
@@ -367,7 +364,7 @@ export default function Welcome() {
     <h3 className="font-playfair text-base sm:text-lg md:text-2xl font-bold mb-1 md:mb-3" style={{ color: 'var(--mings-black)' }}>
       Address
     </h3>
-    <p className="font-cormorant text-xs sm:text-sm md:text-lg force-normal-font" style={{ color: 'var(--mings-black)' }}>123 Food Street<br />Culinary District, City</p>
+    <p className="font-cormorant text-xs sm:text-sm md:text-lg force-normal-font" style={{ color: 'var(--mings-black)' }}>Shop no 2&3, ganga godavari apartment,<br />katemanivali naka, Prabhuram Nagar,<br />Kalyan East, Thane, Kalyan,<br />Maharashtra 421306</p>
   </motion.div>
   <motion.div
     className="text-center p-3 sm:p-4 md:p-6 rounded-lg sm:rounded-xl md:rounded-2xl border-2 md:border-3 min-h-[120px] sm:min-h-[140px] md:min-h-[200px] flex flex-col justify-center"
@@ -382,7 +379,7 @@ export default function Welcome() {
     <h3 className="font-playfair text-base sm:text-lg md:text-2xl font-bold mb-1 md:mb-3" style={{ color: 'var(--mings-black)' }}>
       Contact
     </h3>
-    <p className="font-cormorant text-xs sm:text-sm md:text-lg force-normal-font" style={{ color: 'var(--mings-black)' }}>+91 98765 43210<br />info@mingsrestaurant.com</p>
+    <p className="font-cormorant text-xs sm:text-sm md:text-lg force-normal-font" style={{ color: 'var(--mings-black)' }}>+91 75069 69333<br />info@mingsrestaurant.com</p>
   </motion.div>
 </motion.div>
           </motion.div>

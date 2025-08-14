@@ -60,7 +60,7 @@ export default function QuickStarRating({ className = "" }: QuickStarRatingProps
             >
               <Star 
                 className="w-8 h-8 cursor-pointer transition-all duration-300 group-hover:scale-110" 
-                style={{ color: 'var(--mings-orange)' }}
+                style={{ color: '#FFD700' }}
                 fill="currentColor"
               />
             </motion.div>
@@ -69,8 +69,13 @@ export default function QuickStarRating({ className = "" }: QuickStarRatingProps
 
         {/* Subtitle */}
         <motion.p
-          className="font-cormorant text-sm md:text-base italic mt-3"
-          style={{ color: 'var(--mings-white)' }}
+          className="text-sm md:text-base mt-3"
+          style={{ 
+            color: 'var(--mings-white)',
+            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+            fontWeight: '400',
+            fontStyle: 'normal'
+          }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.2 }}
