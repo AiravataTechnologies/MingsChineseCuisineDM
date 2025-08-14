@@ -60,7 +60,7 @@ export default function QuickStarRating({ className = "" }: QuickStarRatingProps
             >
               <Star 
                 className="w-8 h-8 cursor-pointer transition-all duration-300 group-hover:scale-110" 
-                style={{ color: '#FFD700' }}
+                style={{ color: 'var(--mings-orange)' }}
                 fill="currentColor"
               />
             </motion.div>
